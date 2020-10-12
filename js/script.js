@@ -1,3 +1,4 @@
+//Lista med pokemons
 let pokemons = [
     'Bulbasaur',
     'Squirtle',
