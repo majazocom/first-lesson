@@ -1,13 +1,23 @@
+//Skapa event listener till vår knapp
+
+document.getElementById('btn').addEventListener('click', 
+    function() {
+        // När någon klickat på knappen då ska 
+        // ett pokemonnamn dyka upp
+        document.getElementById('currentPokemon').innerHTML = 
+        pokemons[0];
+    }
+)
+
 //Lista med pokemons
 let pokemons = [
-    'Bulbasaur',
-    'Squirtle',
-    'Ekans',
-    'Vulpix',
-    'Charmander'
+    '<img src="https://i.pinimg.com/736x/6f/aa/74/6faa74e32ce5f00f2dbc9c0b095cda52.jpg" alt="Girl in a jacket" width="200" height="200">', //0
+    'Squirtle',  //1
+    'Ekans',     //2
+    'Vulpix',    //3
+    'Charmander', //4
+    'Pikachu'
 ];
-
-document.write(pokemons + "<br><br>");
 
 //Pikachu som objekt
 let pikachu = {
