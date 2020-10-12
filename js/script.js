@@ -1,15 +1,34 @@
+let pokemons = [
+    'Bulbasaur',
+    'Squirtle',
+    'Ekans',
+    'Vulpix',
+    'Charmander'
+];
+
+document.write(pokemons + "<br><br>");
+
 //Pikachu som objekt
 let pikachu = {
     name: 'Pikachu',
     number: 25,
-    age: 2
+    age: 2,
+    isAwesome: true
 };
+
+//Checka om pikachu är awesome
+if (pikachu.isAwesome) {
+    document.write("Pikachu surely is awesome <br>");
+}
 
 document.write(pikachu.age + 20 + " years old" + "<br>");
 
+
 if (pikachu.age >= 2) {
+    //Om vår pikachu är äldre eller lika med 2 år
     document.write("Def is over 2y old" + "<br>");
 } else {
+    //Annars
     document.write("over 2y old" + "<br>");
 }
 
