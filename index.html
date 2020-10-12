@@ -8,12 +8,15 @@
 <body>
     <script>
         let pokemon = "Raichu";
-        // Om vår pokemon är antingen Pika eller Raichu - kör koden
-        if (pokemon == "Pika" || pokemon == "Raichu") {
-            document.write("The pokemon used thunderbolt");
+        // Om vår pokemon är Pika - kör koden
+        if (pokemon == "Pikachu") {
+            document.write("Pikachu is here");
+        } else if (pokemon == "Raichu") {
+        // Om vår pokemon är Raichu - kör koden
+            document.write("Raichu is here");
         } else {
-            //Annars har vi tagit fel pokemonboll
-            document.write("Nah, wrong pokemon");
+            //Om inget av ovanstående är sant - avfyras detta
+            document.write("Not Raichu or Pika");
         }
 
     </script>
