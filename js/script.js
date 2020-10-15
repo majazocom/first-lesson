@@ -19,11 +19,6 @@ sayHello();
 
 //Function with parameters
 
-const add = function(a, b) {
-    document.write(a + b);
-}
-
-add('23', 20);
 
 const lift = function(person1, person2) {
     document.write(person1 + ' & ' + person2 + ' came up to the top. <br>');
@@ -45,7 +40,6 @@ const greet2 = function(name = 'Berra', time = 'day') {
 
 greet2();
 
-
 const renderImage = function() {
         // När någon klickat på knappen då ska 
         // ett pokemonnamn dyka upp
@@ -59,9 +53,47 @@ const renderImage = function() {
 document.querySelector('#btn').addEventListener('click', renderImage);
 
 
+
+
+
+const add = function(a, b) {
+    return a + b;
+ }
+ 
+const aAndB = add(1, 2);
+
+const addStuff = function(amount) {
+    let result = amount - aAndB;
+    return result;
+}
+
+const quickMath = addStuff(13);
+console.log(quickMath);
+
+// ------------------------------------------------
+
+
+
+const sub = function(first, second, third){
+    let result = first - second - third;
+    return result;
+}
+
+const apa = sub(1, 5, 10);
+
+console.log(apa);
+
+
+
+
+
+
+
+
+
 //Lista med pokemons
 let pokemons = [
-    '<img src="https://i.pinimg.com/736x/6f/aa/74/6faa74e32ce5f00f2dbc9c0b095cda52.jpg" alt="Girl in a jacket" width="200" height="200">', //0
+    '<img src="https://i.pinimg.com/736x/6f/aa/74/6faa74e32ce5f00f2dbc9c0b095cda52.jpg" alt="Bulbasaur" width="200" height="200">', //0
     'Squirtle',  //1
     'Ekans',     //2
     'Vulpix',    //3
