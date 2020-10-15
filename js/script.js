@@ -23,27 +23,51 @@ const add = function(a, b) {
     document.write(a + b);
 }
 
-//add("23", 20);
+add('23', 20);
 
 const lift = function(person1, person2) {
-    document.write(person1 + ' & ' + person2 + ' came up to the top.');
+    document.write(person1 + ' & ' + person2 + ' came up to the top. <br>');
 }
 
-lift("Hasse", "Berra");
+lift("Hasse", "Lennart");
+
+//Parameters with default values
+const greet = function(name = 'Berra', time = 'day') {
+    document.write('Good ' + time + ' ' + name + '<br>');
+}
+
+greet();
+
+//Function with javascript identifiers (${value})
+const greet2 = function(name = 'Berra', time = 'day') {
+    document.write(`<h1>Good ${time} ${name} this is rendered as a regular string</h1>`);
+}
+
+greet2();
 
 
+const renderImage = function() {
+        // När någon klickat på knappen då ska 
+        // ett pokemonnamn dyka upp
+        document.querySelector('#currentPokemon').innerHTML = 
+        pokemons[0];
+        //debugger;
+}
 
 //Skapa event listener till vår knapp
 
-// document.querySelector('#btn').addEventListener('click', 
-//     function() {
-//         // När någon klickat på knappen då ska 
-//         // ett pokemonnamn dyka upp
-//         document.querySelector('#currentPokemon').innerHTML = 
-//         pokemons[0];
-//         //debugger;
-//     }
-// )
+document.querySelector('#btn').addEventListener('click', renderImage);
+
+
+//Lista med pokemons
+let pokemons = [
+    '<img src="https://i.pinimg.com/736x/6f/aa/74/6faa74e32ce5f00f2dbc9c0b095cda52.jpg" alt="Girl in a jacket" width="200" height="200">', //0
+    'Squirtle',  //1
+    'Ekans',     //2
+    'Vulpix',    //3
+    'Charmander', //4
+    'Pikachu'
+];
 
 //Declared variable fruit
 let fruit = 'lemon';
@@ -56,17 +80,12 @@ console.log(fruit);
 fruit = 'apple';
 console.log(fruit);
 
+//Variable as parameter in function
+const fruitBasket = function(frukt) {
+    console.log('this is the fruit: ' + frukt);
+}
 
-
-//Lista med pokemons
-let pokemons = [
-    '<img src="https://i.pinimg.com/736x/6f/aa/74/6faa74e32ce5f00f2dbc9c0b095cda52.jpg" alt="Girl in a jacket" width="200" height="200">', //0
-    'Squirtle',  //1
-    'Ekans',     //2
-    'Vulpix',    //3
-    'Charmander', //4
-    'Pikachu'
-];
+fruitBasket(fruit);
 
 //Pikachu som objekt
 let pikachu = {
