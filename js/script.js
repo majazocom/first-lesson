@@ -1,13 +1,62 @@
+//Function declaration
+
+function sayHi() {
+    document.write('Hi! ');
+}
+
+//Call the function
+
+sayHi();
+
+//Function expression
+
+const sayHello = function() {
+    document.write('Hello! ');
+}
+
+//Call the function
+sayHello();
+
+//Function with parameters
+
+const add = function(a, b) {
+    document.write(a + b);
+}
+
+//add("23", 20);
+
+const lift = function(person1, person2) {
+    document.write(person1 + ' & ' + person2 + ' came up to the top.');
+}
+
+lift("Hasse", "Berra");
+
+
+
 //Skapa event listener till vår knapp
 
-document.getElementById('btn').addEventListener('click', 
-    function() {
-        // När någon klickat på knappen då ska 
-        // ett pokemonnamn dyka upp
-        document.getElementById('currentPokemon').innerHTML = 
-        pokemons[0];
-    }
-)
+// document.querySelector('#btn').addEventListener('click', 
+//     function() {
+//         // När någon klickat på knappen då ska 
+//         // ett pokemonnamn dyka upp
+//         document.querySelector('#currentPokemon').innerHTML = 
+//         pokemons[0];
+//         //debugger;
+//     }
+// )
+
+//Declared variable fruit
+let fruit = 'lemon';
+
+console.log(fruit);
+fruit = 'strawberry';
+console.log(fruit);
+fruit = 'pear';
+console.log(fruit);
+fruit = 'apple';
+console.log(fruit);
+
+
 
 //Lista med pokemons
 let pokemons = [
@@ -29,7 +78,7 @@ let pikachu = {
 
 //Checka om pikachu är awesome
 if (pikachu.isAwesome) {
-    document.write("Pikachu surely is awesome <br>");
+    document.write("<br> Pikachu surely is awesome <br>");
 }
 
 document.write(pikachu.age + 20 + " years old" + "<br>");
@@ -54,3 +103,5 @@ if (pokemon == "Pikachu") {
     //Om inget av ovanstående är sant - avfyras detta
     document.write("<br>Not Raichu or Pika");
 }
+
+console.log(fruit + " last value");
