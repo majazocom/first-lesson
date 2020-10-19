@@ -1,123 +1,32 @@
-//Function declaration
-
-function sayHi() {
-    document.write('Hi! ');
-}
-
-//Call the function
-
-sayHi();
-
 //Function expression
-
-const sayHello = function() {
-    document.write('Hello! ');
-}
-
-//Call the function
-sayHello();
-
-//Function with parameters
-
-
-const lift = function(person1, person2) {
-    document.write(person1 + ' & ' + person2 + ' came up to the top. <br>');
-}
-
-lift("Hasse", "Lennart");
-
-//Parameters with default values
-const greet = function(name = 'Berra', time = 'day') {
-    document.write('Good ' + time + ' ' + name + '<br>');
-}
-
-greet();
-
-//Function with javascript identifiers (${value})
-const greet2 = function(name = 'Berra', time = 'day') {
-    document.write(`<h1>Good ${time} ${name} this is rendered as a regular string</h1>`);
-}
-
-greet2();
-
-const renderImage = function() {
-        // När någon klickat på knappen då ska 
-        // ett pokemonnamn dyka upp
-        document.querySelector('#currentPokemon').innerHTML = 
+const renderImage = function () {
+    /* När någon klickat på knappen då ska 
+       en pokemonbild dyka upp */
+    document.querySelector('#currentPokemon').innerHTML =
         pokemons[0];
-        //debugger;
+    //debugger;
+}
+
+const removeImage = function() {
+    document.querySelector('#currentPokemon').innerHTML = "";
 }
 
 //Skapa event listener till vår knapp
+document.querySelector('#btn').addEventListener('mouseover', renderImage);
 
-document.querySelector('#btn').addEventListener('click', renderImage);
-
-
-
-
-
-const add = function(a, b) {
-    return a + b;
- }
- 
-const aAndB = add(1, 2);
-
-const addStuff = function(amount) {
-    let result = amount - aAndB;
-    return result;
-}
-
-const quickMath = addStuff(13);
-console.log(quickMath);
-
-// ------------------------------------------------
-
-
-
-const sub = function(first, second, third){
-    let result = first - second - third;
-    return result;
-}
-
-const apa = sub(1, 5, 10);
-
-console.log(apa);
-
-
-
-
-
-
-
+document.querySelector('#btn').addEventListener('mouseout', removeImage);
 
 
 //Lista med pokemons
 let pokemons = [
     '<img src="https://i.pinimg.com/736x/6f/aa/74/6faa74e32ce5f00f2dbc9c0b095cda52.jpg" alt="Bulbasaur" width="200" height="200">', //0
-    'Squirtle',  //1
-    'Ekans',     //2
-    'Vulpix',    //3
+    'Squirtle',   //1
+    'Ekans',      //2
+    'Vulpix',     //3
     'Charmander', //4
-    'Pikachu'
+    'Pikachu'     //5
 ];
 
-//Declared variable fruit
-let fruit = 'lemon';
-
-console.log(fruit);
-fruit = 'strawberry';
-console.log(fruit);
-fruit = 'pear';
-console.log(fruit);
-fruit = 'apple';
-console.log(fruit);
-
-//Variable as parameter in function
-const fruitBasket = function(frukt) {
-    console.log('this is the fruit: ' + frukt);
-}
-
-fruitBasket(fruit);
 
 //Pikachu som objekt
 let pikachu = {
@@ -148,11 +57,9 @@ let pokemon = "Raichu";
 if (pokemon == "Pikachu") {
     document.write("<br> Pikachu is here");
 } else if (pokemon == "Raichu") {
-// Om vår pokemon är Raichu - kör koden
+    // Om vår pokemon är Raichu - kör koden
     document.write("<br>Raichu is here");
 } else {
     //Om inget av ovanstående är sant - avfyras detta
     document.write("<br>Not Raichu or Pika");
 }
-
-console.log(fruit + " last value");
