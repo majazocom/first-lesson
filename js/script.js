@@ -1,21 +1,19 @@
 //Function expression
-const renderImage = function () {
-    /* När någon klickat på knappen då ska 
-       en pokemonbild dyka upp */
-    document.querySelector('#currentPokemon').innerHTML =
-        pokemons[0];
-    //debugger;
-}
 
-const removeImage = function() {
-    document.querySelector('#currentPokemon').innerHTML = "";
-}
+document.addEventListener('click', function(e) {
+    //The code that will be executed on click
+    console.log(e);
+    //save button element as a variable
+    let btn = document.getElementById('btn');
 
-//Skapa event listener till vår knapp
-document.querySelector('#btn').addEventListener('mouseover', renderImage);
+    //check if the click is on the button
+    if (e.target == btn) {
+        document.write("TRUE");
+    } else {
+        console.log('faaaalse');
+    }
 
-document.querySelector('#btn').addEventListener('mouseout', removeImage);
-
+});
 
 //Lista med pokemons
 let pokemons = [
@@ -26,7 +24,6 @@ let pokemons = [
     'Charmander', //4
     'Pikachu'     //5
 ];
-
 
 //Pikachu som objekt
 let pikachu = {
@@ -44,7 +41,7 @@ if (pikachu.isAwesome) {
 document.write(pikachu.age + 20 + " years old" + "<br>");
 
 
-if (pikachu.age >= 2) {
+if (pikachu.age <= 2) {
     //Om vår pikachu är äldre eller lika med 2 år
     document.write("Def is over 2y old" + "<br>");
 } else {
