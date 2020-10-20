@@ -1,18 +1,25 @@
 
 document.addEventListener('click', function(e) {
     //The code that will be executed on click
-    console.log(e);
     //save button element as a variable
     let btn = document.getElementById('btn');
 
     //check if the click is on the button
     if (e.target == btn) {
         document.write("TRUE");
-    } else {
-        console.log('faaaalse');
     }
 
 });
+
+let myPokemon = "";
+
+const chosenPokemon = function(){
+    myPokemon = document.getElementById('pokemon-input').value;
+    document.getElementById('chosenPokemon').innerHTML = "You have chosen: " + myPokemon;
+};
+
+document.getElementById('submit-btn').addEventListener('click', chosenPokemon);
+
 
 //Lista med pokemons
 let pokemons = [
