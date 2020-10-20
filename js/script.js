@@ -1,4 +1,3 @@
-//Function expression
 
 document.addEventListener('click', function(e) {
     //The code that will be executed on click
