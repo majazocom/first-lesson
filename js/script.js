@@ -31,6 +31,16 @@ let pokemons = [
     'Pikachu'     //5
 ];
 
+let newArray = new Array('Hej', 'Hejsan', 'Tja');
+
+console.log(newArray.length);
+
+let pokemonObjects = []
+
+let pokemonNumbers = [
+    1, 2, 3, 4, 5
+]
+
 //Pikachu som objekt
 let pikachu = {
     name: 'Pikachu',
