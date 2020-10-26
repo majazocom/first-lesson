@@ -13,12 +13,64 @@ document.addEventListener('click', function(e) {
 
 let myPokemon = "";
 
-const chosenPokemon = function(){
+const chosenPokemon = () => {
     myPokemon = document.getElementById('pokemon-input').value;
     document.getElementById('chosenPokemon').innerHTML = "You have chosen: " + myPokemon;
 };
 
 document.getElementById('submit-btn').addEventListener('click', chosenPokemon);
+
+
+
+// % - modulus, den delar ett värde på ett annat värde 
+// och kollar om det blir några rester kvar
+
+let isEven = (number) => {
+    //Check if something is even
+    return number % 2 === 0;
+    //We expect a boolean
+}
+
+let array = [1, 2, 45, 64, 5, 6];
+
+let filter = (numbers) => {
+    
+    for (let i = 0; i < numbers.length; i++) {
+        if (isEven(numbers[i])) {
+            //If true
+            console.log(numbers[i] + ' is even');
+        } else {
+            //If false
+            console.log(numbers[i] + ' is not even');
+        }
+    }
+
+}
+
+filter(array);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Lista med pokemons
@@ -76,3 +128,4 @@ if (pokemon == "Pikachu") {
     //Om inget av ovanstående är sant - avfyras detta
     document.write("<br>Not Raichu or Pika");
 }
+
