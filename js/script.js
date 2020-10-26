@@ -50,6 +50,7 @@ let result = array.filter(isEven);
 console.log(result);
 
 
+//List of users
 users = [
     {
       name: 'Zelda',
@@ -65,10 +66,35 @@ users = [
     }
   ];
 
+// We want to get all the names in the list of objects
+// and save them to a new list
 
 
+//New empty name list
+let nameList = [];
 
+//Write a function to get name of user
+let getName = (userObject) => {
+    return userObject.name;
+}
 
+// //Map over users and push the names in a new array
+// let map = (objects) => {
+//     for (let i = 0; i < objects.length; i++) {
+//         //Pass the object to getName-function to get the name
+//         let name = getName(objects[i]);
+//         nameList.push(name);
+//     }
+// }
+
+// map(users);
+// console.log(nameList);
+
+//Instead of above code we can use .map
+
+nameList = users.map(getName);
+
+console.log(nameList);
 
 
 
