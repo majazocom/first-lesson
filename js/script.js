@@ -33,21 +33,22 @@ let isEven = (number) => {
 
 let array = [1, 2, 45, 64, 5, 6];
 
-let filter = (numbers) => {
+let filter2 = (numbers) => {
     
     for (let i = 0; i < numbers.length; i++) {
         if (isEven(numbers[i])) {
             //If true
-            console.log(numbers[i] + ' is even');
-        } else {
-            //If false
-            console.log(numbers[i] + ' is not even');
+            console.log(numbers[i]);
         }
     }
-
 }
 
-filter(array);
+filter2(array);
+
+let result = array.filter(isEven);
+
+console.log(result);
+
 
 
 
@@ -85,7 +86,6 @@ let pokemons = [
 
 let newArray = new Array('Hej', 'Hejsan', 'Tja');
 
-console.log(newArray.length);
 
 let pokemonObjects = []
 
