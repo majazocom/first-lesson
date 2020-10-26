@@ -13,12 +13,43 @@ document.addEventListener('click', function(e) {
 
 let myPokemon = "";
 
-const chosenPokemon = function(){
+const chosenPokemon = () => {
     myPokemon = document.getElementById('pokemon-input').value;
     document.getElementById('chosenPokemon').innerHTML = "You have chosen: " + myPokemon;
 };
 
 document.getElementById('submit-btn').addEventListener('click', chosenPokemon);
+
+
+
+let isEven = (number) => {
+    //Check if something is even
+    number % 2 === 0;
+}
+
+let array = [1, 2, 3, 4, 5, 6];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Lista med pokemons
@@ -76,3 +107,4 @@ if (pokemon == "Pikachu") {
     //Om inget av ovanstående är sant - avfyras detta
     document.write("<br>Not Raichu or Pika");
 }
+
