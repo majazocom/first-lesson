@@ -71,7 +71,7 @@ users = [
 
 
 //New empty name list
-let nameList = [];
+let nameList = ['Maja', 'Bowser'];
 
 //Write a function to get name of user
 let getName = (userObject) => {
