@@ -139,13 +139,24 @@ let pokemons = [
 
 //Add eventlistener to the button
 document.getElementById("search-button").addEventListener('click', () => {
-//Get the text from the input - save into variable
+    //Get the value from the input - save into variable
 
-//Matcha input mot pokemon.name
+    let input = document.getElementById("search-input").value;
+    console.log(input);
+    //Matcha input mot pokemon.name
 
-//If match -> render "We got a match" in HTML
+    let result = pokemons.find((obj) => {
+        if (obj.name === input) {
+            return true;
+        }
+    })
 
-//If not -> render "Type a Pokemon from the first gen id 1-34"
-
+    if (result) {
+        //If match -> render "We got a match" in HTML
+        document.getElementById('search-result').innerHTML = 'We got a match: ' + result.name;
+    } else {
+        //If not -> render "Type a Pokemon from the first gen id 1-34"
+        document.write('Type a Pokemon from the first gen id 1-34');
+    }
 })
 
