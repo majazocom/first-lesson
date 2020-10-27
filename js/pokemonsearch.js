@@ -136,3 +136,16 @@ let pokemons = [
         id: 34
     },
 ]
+
+//Add eventlistener to the button
+document.getElementById("search-button").addEventListener('click', () => {
+//Get the text from the input - save into variable
+
+//Matcha input mot pokemon.name
+
+//If match -> render "We got a match" in HTML
+
+//If not -> render "Type a Pokemon from the first gen id 1-34"
+
+})
+
