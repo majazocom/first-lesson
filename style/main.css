@@ -1,0 +1,17 @@
+/* OBS: fonten fungerar inte för alla webbläsare */
+@font-face {
+    font-family: 'PokemonHollow';
+    src: url('./fonts/PokemonHollow.ttf')format('truetype');
+  }
+  @font-face {
+    font-family: 'PokemonSolid';
+    src: url('./fonts/PokemonSolid.ttf')format('truetype'); }
+
+/* Förstavalsfont är PokemonSolid, Gill Sans är vår fallback */
+body {
+    font-family: 'PokemonSolid', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+    font-size: 2rem;
+}
