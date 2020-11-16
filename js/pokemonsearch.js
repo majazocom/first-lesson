@@ -5,6 +5,11 @@ document.getElementById("search-button").addEventListener('click', () => {
 
     fetch('../assets/pokemon.json')
         .then(data => data.json())
-        .then(console.log);
+        .then(data => {
+            console.log('Success: ', data)
+        })
+        .catch((error) => {
+            console.log('Error: ', error);
+        })
 })
 
